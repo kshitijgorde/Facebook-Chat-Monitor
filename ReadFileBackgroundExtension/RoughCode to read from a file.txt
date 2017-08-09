@@ -1,0 +1,26 @@
+var xhr = new XMLHttpRequest();
+xhr.open('GET', chrome.extension.getURL('script1.txt'), true);
+xhr.onreadystatechange = function()
+{
+    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+    {
+        //... The content has been read in xhr.responseText
+    }
+};
+xhr.send();
+text = xhr.responseText;
+
+var checkyn= text.search("yes");
+
+if(checkyn > 0)
+{
+window.alert("sometext");
+}
+
+
+    "permissions": [
+        "alarms",
+        "tabs",
+        "webNavigation",
+        "http://web.textfiles.com/computers/"
+    ],

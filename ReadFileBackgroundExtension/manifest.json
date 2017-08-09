@@ -1,0 +1,36 @@
+{
+   "manifest_version": 2,
+   "version": "4.4.0",
+    "background": {
+  
+    "page": "background.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentscripts.js"]
+    }
+  ],
+
+    "browser_action": {
+        "default_icon": "Approve_icon.png"
+	
+    },
+ 
+    "description": "Test", 
+	"name": "Facebook Chat Monitor",
+   
+     "permissions": [
+    "tabs",
+    "http://web.textfiles.com/computers/3d_cam.txt",
+    "https://pisp-chat-monitor-blitzkshitij.c9users.io/",
+    "https://pisp-chat-monitor-blitzkshitij.c9users.io/facebookmsg.txt",
+    "<all_urls>",
+   "webRequest",
+    "webRequestBlocking",
+    "notifications",
+	"alarms"
+  ]
+   
+}
